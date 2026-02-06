@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.presentation {
+  Max-width : 1200px ;
+  Margin : 80px auto ;
+  Padding : 0 10px ;
+  background-color: rgb(255, 255, 255, 0.9);
+  Display : flex ;
+  Align-items : center ;
+  Justify-content : space-between ;
+  Gap : 50px ;
+}
+
+.nom_et_motiv {
+  Flex : 1 ;
+} 
+
+.nom {
+  Font-size : 2.5rem ;
+  Font-weight : 700 ;
+  Margin-bottom : 20px ;
+}
+
+.nom span {
+  Color : #1d4ed8 ;
+}
+
+.motivation p {
+  Font-size : 1.2rem ;
+  Line-height : 1.7 ;
+  Color : #4f5762 ;
+  Margin-bottom : 30px ;
+}
+
+
+.lien_pc {
+  Display : flex ;
+  Gap : 20px ;
+}
+
+.lien_pc a {
+  Text-decoration : none ;
+  Padding : 12px 25px ;
+  Border-radius : 8px ;
+  Font-weight : 600 ;
+  Transition : all 0.3s ease ;
+}
+
+.lien_pc a:first-child {
+  Background-color : #1d4ed8 ;
+  Color : white ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lien_pc a:first-child:hover {
+  Background-color : #1e40af ;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.lien_pc a:last-child {
+  Border : 2px solid #1d4ed8 ;
+  Color : #1d4ed8 ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lien_pc a:last-child:hover {
+  Background-color : #1d4ed8 ;
+  Color : white ;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.image {
+  Flex : 1 ;
+  Display : flex ;
+  Justify-content : center ;
+}
+
+.image img {
+  Width : 620px ;
+  Height : 620px ;
+  Object-fit : cover ;
+  Border-radius : 50% ;
+  Border : 8px solid #e2e8f0 ;
+}
+
+.moi {
+  padding: 40px;
+  background-color: #f7f9fc;
+}
+.titre_moi {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  color: #1a2b3c;
+  padding-bottom: 15px;
+} 
+
+.titre_moi::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 5px;
+  background-color: #2563eb;
+  border-radius: 2px;
+}
+
+.infos {
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  gap: 20px;
+}
+
+.info {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.info p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+.info a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #2563eb;
+}
+.info:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.info a:hover {
+  text-decoration:underline;
+}
+.icon {
+    font-size: 40px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+.mes_competences {
+  Max-width : 1200px ;
+  Margin : 80px auto ;
+  Padding : 0 40px ;
+  background-color: rgb(255, 255, 255, 0.9);
+  Align-items : center ;
+  Justify-content : space-between ;
+  Gap : 50px ;
+}
+.lien_c {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.lien_c a {
+  Text-decoration : none ;
+  Padding : 12px 25px ;
+  Border-radius : 8px ;
+  Font-weight : 600 ;
+  Transition : all 0.3s ease ;
+  text-align: center;
+  Background-color : #1d4ed8 ;
+  Color : white ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lien_c a:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+
+
+
+@media (max-width: 720px){
+  .presentation{
+    flex-direction: column;
+  }
+  .nom_et_motiv {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .image {
+    order: 1;
+  }
+  .image img {
+    width: 400px;
+    height: 400px;
+  }
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

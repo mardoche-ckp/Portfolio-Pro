@@ -1,0 +1,222 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.titre_section {
+    background-color: #e7eaed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height : 300px ;
+    justify-content: center;
+}
+.titre_section h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.titre_section p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+.education {
+  background-color: rgb(255, 255, 255 ,0.9);
+  padding: 70px;
+}
+
+.cursus {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+.cursus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: blue;
+  transform: translateX(-50%);
+}
+
+
+.diplome {
+  position: relative;
+  width: 35%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255 ,0.9);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.diplome:nth-child(odd) {
+  left: 10%;
+}
+
+.diplome:nth-child(even) {
+  left: 55%;
+}
+
+.diplome::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  width: 18px;
+  height: 18px;
+  background: #1e4ed8;
+  border-radius: 50%;
+}
+
+.diplome:nth-child(odd)::before {
+  right: -69px;
+}
+
+.diplome:nth-child(even)::before {
+  left: -69px;
+}
+
+.annee {
+  background-color: blue;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 50px;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  padding: 8px;
+}
+.diplome h2 {
+  font-size: 1.7rem;
+}
+.diplome p {
+  font-size: 1.3rem;
+}
+.ecole {
+  color: blue;
+}
+.cours ul , .realisation ul , .cours p{
+  padding-left: 20px;
+  font-size: 1.1rem;
+  Line-height : 1.7 ;
+  Color : #4f5762 ;
+  margin: 10px;
+}
+
+
+.objectifs_ac{
+  background-color: #e7eaed;
+  padding: 70px;
+}
+.objectifs_ac h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.objectifs_ac h2::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100px;
+  height: 4px;
+  background-color: #2563eb;
+  border-radius: 2px;
+}
+
+.conteneur_obj{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+.cpt_obj {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255 ,0.9);
+  border-radius: 10px;
+  height: 250px; 
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+
+}
+.cpt_obj:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.cpt_obj h3 i {
+  font-size: 30px;
+  color: #2563eb;
+}
+.cpt_obj h3 {
+  font-size: 1.7rem;
+}
+.cpt_obj h4 {
+  font-size: 1.1rem;
+  Line-height : 1.7 ;
+  Color : #cfd5de ;
+}
+.cpt_obj p {
+  font-size: 1.1rem;
+  Line-height : 1.7 ;
+  Color : #4f5762 ;
+}
+
+
+
+@media (max-width: 720px) {
+
+  .education , .objectifs_ac{
+    padding: 30px;
+  }
+  .cursus::before {
+    left: 20px;
+  }
+
+  .diplome {
+    width: 80%;
+    left: 0;
+    padding-left: 30px;
+    margin-bottom: 50px;
+  }
+
+  .diplome::before {
+    left: 10px ;
+  }
+
+  .diplome:nth-child(odd) {
+    left: 15%;
+  }
+
+  .diplome:nth-child(even) {
+    left: 15%;
+  }
+  .diplome:nth-child(odd)::before {
+    left: -53px;
+  }
+
+  .diplome:nth-child(even)::before {
+    left: -53px;
+  }
+
+  .conteneur_obj{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+  }
+
+}

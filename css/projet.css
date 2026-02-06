@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.titre_section {
+    background-color: #e7eaed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height : 300px ;
+    justify-content: center;
+}
+.titre_section h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.titre_section p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.projets {
+    padding: 70px;
+    background-color: rgb(255, 255, 255, 0.9);
+}
+.conteneur {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.projet {
+    width: 400px;
+    height: 800px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+.image_projet  {
+    width: 400px;
+    height: 200px;
+    Object-fit : cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.projet h3 {
+    font-size: 1.5rem;
+    padding: 20px;
+}
+.language_prog {
+    display: flex;
+    gap: 10px;
+    padding-left: 30px;
+} 
+.language_prog div {
+    background-color: rgb(175, 175, 218);
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+}
+.projet p {
+    padding-left: 20px;
+    font-size: 1.1rem;
+    Line-height : 1.7 ;
+    Color : #4f5762
+}
+.fonction h4 {
+    font-size: 1.3rem;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+.fonction ul {
+    font-size: 1.1rem;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+    padding-left: 70px;
+}
+.lien_pj {
+    padding-left: 30px;
+    margin: 20px;
+}
+.lien_pj a {
+    Text-decoration : none ;
+    Padding : 12px 15px ;
+    Border-radius : 8px ;
+    Font-weight : 600 ;
+    Background-color : #1d4ed8 ;
+    Color : white ;
+    Transition : all 0.3s ease ;
+}
+.lien_pj a:hover {
+  background-color: #045388;
+}
+.objectifs_ac{
+    background-color: #e7eaed;
+    padding: 70px;
+}
+.objectifs_pro {
+    background-color: rgb(255, 255, 255) ;
+    padding: 70px;
+}
+.objectifs_pro h2 ,.objectifs_ac h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.objectifs_pro h2::after , .objectifs_ac h2::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100px;
+    height: 4px;
+    background-color: #2563eb;
+    border-radius: 2px;
+}
+
+.conteneur_obj{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.cpt_obj {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255 ,0.9);
+    border-radius: 10px;
+    height: 280px; 
+    width: 400px;
+    padding: 20px;
+    transition: all 0.3s ease;
+
+}
+.cpt_obj:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.cpt_obj h3 i {
+    font-size: 30px;
+    color: #2563eb;
+}
+.cpt_obj h3 {
+    font-size: 1.7rem;
+}
+.cpt_obj p {
+    font-size: 1.1rem;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+    padding-left: 10px;
+}
+
+.conteneur_cpt{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.cpt_trans {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    height: 425px;
+    width: 400px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+
+}
+.cpt_trans h3 i {
+    font-size: 30px;
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+.cpt_trans h3 {
+    font-size: 1.7rem;
+}
+.cpt_trans ul {
+    font-size: 1.1rem;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+    padding-left: 20px;
+}
+
+
+@media (max-width: 720px){
+    .projets ,.objectifs_pro ,.objectifs_ac {
+        padding: 30px;
+    }
+    .conteneur ,.conteneur_obj , .conteneur_cpt {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}

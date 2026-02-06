@@ -1,0 +1,227 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.titre_section {
+    background-color: #e7eaed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height : 300px ;
+    justify-content: center;
+}
+.titre_section h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.titre_section p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.presentation {
+  Max-width : 1200px ;
+  Margin : 80px auto ;
+  background-color: rgb(255, 255, 255, 0.9);
+  Display : flex ;
+  Align-items : center ;
+  Justify-content : space-between ;
+  Gap : 50px ;
+}
+
+.nom_et_motiv {
+  Flex : 1 ;
+} 
+
+.nom {
+  Font-size : 2.5rem ;
+  Font-weight : 700 ;
+  Margin-bottom : 20px ;
+}
+
+.nom span {
+  Color : #1d4ed8 ;
+}
+
+.motivation p {
+  Font-size : 1.1rem ;
+  Line-height : 1.7 ;
+  Color : #4f5762 ;
+  Margin-bottom : 30px ;
+}
+
+.contact p span {
+    font-size: 1.3rem;
+    Line-height : 1.7 ;
+    Color : #2F4F6F ;
+    margin-right: 50px;
+    font-weight: 900;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+    padding : 10px ;
+    border-bottom: 1px solid #696f78;
+
+}
+
+.image {
+  Flex : 1 ;
+  Display : flex ;
+  Justify-content : center ;
+}
+
+.image img {
+  Width : 550px ;
+  Height : 700px ;
+  Object-fit : cover ;
+  Border-radius : 20% ;
+  Border : 8px solid #e2e8f0 ;
+}
+
+
+.transversles {
+    background-color: #e7eaed ;
+    padding: 70px;
+}
+.passion{
+    background-color: rgb(255, 255, 255, 0.9) ;
+    padding: 70px;
+}
+.transversles h2 , .passion h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+.transversles h2::after , .passion h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100px;
+    height: 4px;
+    background-color: #2563eb;
+    border-radius: 2px;
+}
+.conteneur_cpt_trans{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+.cpt_trans {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(255, 255, 255 ,0.9);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+
+}
+.cpt_pass {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 10px 13px rgba(0,0,0,0.15);
+    padding: 20px;
+    transition: all 0.3s ease;
+
+}
+.cpt_trans:hover , .cpt_pass:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.cpt_trans i , .cpt_pass i{
+    font-size: 40px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+.cpt_trans h3 , .cpt_pass h3 {
+    font-size: 1.5rem;
+}
+.cpt_trans p , .cpt_pass p{
+    Font-size : 1.1rem ;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+    Margin-bottom : 30px ;
+}
+
+.lien_pc {
+  Display : flex ;
+  Gap : 20px ;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.lien_pc a {
+  Text-decoration : none ;
+  Padding : 12px 25px ;
+  Border-radius : 8px ;
+  Font-weight : 600 ;
+  Transition : all 0.3s ease ;
+}
+
+.lien_pc a:first-child {
+  Background-color : #1d4ed8 ;
+  Color : white ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lien_pc a:first-child:hover {
+  Background-color : #1e40af ;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.lien_pc a:last-child {
+  Border : 2px solid #1d4ed8 ;
+  Color : #1d4ed8 ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lien_pc a:last-child:hover {
+  Background-color : #1d4ed8 ;
+  Color : white ;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 720px){
+  .presentation{
+    flex-direction: column;
+  }
+  .nom_et_motiv {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .image {
+    order: 1;
+  }
+  .image img {
+    width: 400px;
+    height: 500px;
+  }
+  .transversles , .passion{
+    padding: 30px;
+  }
+  .conteneur_cpt_trans{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}

@@ -1,0 +1,217 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.titre_section {
+    background-color: #e7eaed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height : 300px ;
+    justify-content: center;
+}
+.titre_section h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.titre_section p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.cont_form {
+    display: flex;
+    padding: 100px;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255 ,0.1);
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.info h2 {
+    margin-bottom: 10px;
+}
+.info h2 i {
+    font-size: 30px;
+    color: #2563eb;
+    padding-right: 20px;
+}
+.info p {
+    font-size: 1.1rem;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+    padding-left: 20px;
+}
+.Rlien {
+    padding-left: 20px;
+}
+.Rlien a i {
+  color: #8b8585;
+  font-size: 24px;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.Rlien a i:hover {
+  color: #3498db;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.transversles {
+    background-color: #e7eaed ;
+    padding: 70px;
+}
+.transversles h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+.transversles h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100px;
+    height: 4px;
+    background-color: #2563eb;
+    border-radius: 2px;
+}
+.conteneur_cpt_trans{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+.cpt_trans {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(255, 255, 255 ,0.9);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+
+}
+.cpt_trans:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.cpt_trans i {
+    font-size: 40px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+.cpt_trans h3 {
+    font-size: 1.5rem;
+}
+.cpt_trans p {
+    Font-size : 1.1rem ;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+    Margin-bottom : 30px ;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 10px 13px rgba(0,0,0,0.15);
+    padding: 20px;
+    transition: all 0.3s ease;
+    width: 600px;
+    height: 700px;
+}
+.formulaire label {
+    Font-size : 1.3rem ;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+}
+.formulaire input {
+    border-radius: 50%;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #4f5762;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.formulaire textarea {
+    width: 100%;
+    height: 200px; 
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1.5px solid #4f5762;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.formulaire button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    margin-top: 15px;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.formulaire input:focus , .formulaire textarea:focus {
+    transform: translateY(-3px);
+    border: 1.9px solid #79a7e7;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.formulaire button:hover {
+    transform: translateY(-5px);
+    background-color: #1f48a2;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+.formulaire h2 {
+    font-size: 2rem;
+    Margin-bottom : 10px
+}
+.formulaire p {
+    Font-size : 1.1rem ;
+    Line-height : 1.7 ;
+    Color : #4f5762 ;
+    Margin-bottom : 30px ;
+}
+
+
+@media (max-width: 720px){
+  .cont_form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .formulaire {
+    width: 100%;
+  }
+  .transversles{
+    padding: 30px;
+  }
+  .conteneur_cpt_trans{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
