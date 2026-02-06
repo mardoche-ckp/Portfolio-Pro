@@ -200,11 +200,23 @@ body {
 
 @media (max-width: 720px){
     .projets ,.objectifs_pro ,.objectifs_ac {
-        padding: 30px;
+        padding: 10px;
     }
     .conteneur ,.conteneur_obj , .conteneur_cpt {
         display: flex;
         flex-direction: column;
         gap: 50px;
+    }
+    .projet {
+        width: 80%;
+        height: 1100px;
+    }
+    .cpt_obj {
+        width: 80%;
+        height: 400px;
+    }
+    .cpt_trans{
+        width: 80%;
+        height: 400px;
     }
 }
